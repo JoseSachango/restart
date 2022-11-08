@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const pino = require('express-pino-logger')();
 
 const app = express();
+const session = require("express-session")
 const path = require("path")
 var compression = require("compression")
 const passport = require("./config/passport")
@@ -28,7 +29,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use(compression({filter:shouldCompress}))
+// app.use(compression({filter:shouldCompress}))
 
 
 // Static directory
