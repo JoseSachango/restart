@@ -3,9 +3,13 @@ console.log("Inside the API folder")
 const axios = require("axios");
 //import axios from "axios"
 //The base URL needs to be the same as the one react is running on, not the one express is running on.
-const axiosinstance = axios.create({
-    baseURL: 'http://localhost:3001'
- });
+// const axiosinstance = axios.create({
+//     baseURL: 'http://localhost:3001'
+//  });
+
+ const axiosinstance = axios.create({
+  baseURL: 'https://enigmatic-lowlands-22287'
+});
 
 
 // Export an object with a "search" method that searches the Giphy API for the passed query
