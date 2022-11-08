@@ -1,3 +1,5 @@
+*.json
+
 credentials.json
 .credentials.json
 /credentials.json

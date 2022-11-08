@@ -1,11 +1,29 @@
 const {google} = require("googleapis")
+const db = require("../models")
+const passport = require("../config/passport")
 module.exports = async function(app) {
 
   
     // GET route for getting all of the todos
     app.get("/dashboards/dashboard1", async function(req, res) {
+
+
       console.log("test 1 before app.get")
       console.log("hit hjit hit")
+
+      db.User.findOne({
+        where: {
+          email:req.body,
+          password: req.body
+        }
+      }).then((response)=>{
+        console.log("The findOne function worked. This is the response: "+response)
+      }).catch((err)=>{
+        console.log("There was an error with the findOne function: "+err)
+      })
+
+
+
       // findAll returns all entries for a table when used with no options
       const auth = new google.auth.GoogleAuth({
           keyFile: "credentials.json",
