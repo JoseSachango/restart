@@ -23,5 +23,5 @@
     "sequelize": "^6.25.5",
     "sequelize-cli": "^6.5.2"
   },
-  "proxy": "https://enigmatic-lowlands-22287"
+  "proxy": "https://enigmatic-lowlands-22287.herokuapp.com/"
 }
